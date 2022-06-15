@@ -1,0 +1,90 @@
+
+
+local KeySystem = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Enter = Instance.new("TextButton")
+local Key = Instance.new("TextBox")
+local Tag = Instance.new("TextLabel")
+local reminder = Instance.new("TextLabel")
+
+--Properties:
+
+KeySystem.Name = "KeySystem"
+KeySystem.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KeySystem.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = KeySystem
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BorderColor3 = Color3.fromRGB(255, 0, 0)
+main.BorderSizePixel = 3
+main.Position = UDim2.new(0.409798473, 0, 0.112888798, 0)
+main.Size = UDim2.new(0, 315, 0, 429)
+
+Title.Name = "Title"
+Title.Parent = main
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title.BorderSizePixel = 3
+Title.Size = UDim2.new(0, 315, 0, 50)
+Title.Font = Enum.Font.Cartoon
+Title.Text = "System Check"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 35.000
+
+Enter.Name = "Enter"
+Enter.Parent = main
+Enter.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Enter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Enter.Position = UDim2.new(0.130158737, 0, 0.561771631, 0)
+Enter.Size = UDim2.new(0, 232, 0, 74)
+Enter.Font = Enum.Font.Cartoon
+Enter.Text = "Enter"
+Enter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enter.TextSize = 38.000
+Enter.MouseButton1Down:Connect(function()
+	if Key.Text == "TrojanHorse" then
+		reminder.Text = "Right key!"
+		main:Destroy()
+		loadstring(game:HttpGet('https://pastebin.com/raw/bfFpEmcv'))()
+	else
+		local kickhanlder = game.Players.LocalPlayer
+		kickhanlder:Kick('Wrong key please join ')
+		warn('Imagine not looking up the right key L')
+	end
+end)
+
+Key.Name = "Key"
+Key.Parent = main
+Key.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Key.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Key.Position = UDim2.new(0.0857142881, 0, 0.265734255, 0)
+Key.Size = UDim2.new(0, 259, 0, 83)
+Key.Font = Enum.Font.Cartoon
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(255, 255, 255)
+Key.TextSize = 31.000
+
+Tag.Name = "Tag"
+Tag.Parent = main
+Tag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tag.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tag.Position = UDim2.new(0.438095242, 0, 0.890442908, 0)
+Tag.Size = UDim2.new(0, 171, 0, 40)
+Tag.Font = Enum.Font.Cartoon
+Tag.Text = "Made by @Trojan.exe"
+Tag.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tag.TextSize = 14.000
+
+reminder.Name = "reminder"
+reminder.Parent = main
+reminder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+reminder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+reminder.Position = UDim2.new(0.180952385, 0, 0.77389276, 0)
+reminder.Size = UDim2.new(0, 200, 0, 50)
+reminder.Visible = false
+reminder.Font = Enum.Font.Cartoon
+reminder.Text = "Wrong Key!"
+reminder.TextColor3 = Color3.fromRGB(255, 0, 0)
+reminder.TextSize = 60.000
