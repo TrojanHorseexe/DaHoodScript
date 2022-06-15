@@ -11,7 +11,7 @@ local reminder = Instance.new("TextLabel")
 --Properties:
 
 KeySystem.Name = "KeySystem"
-KeySystem.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KeySystem.Parent = game.CoreGui
 KeySystem.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
