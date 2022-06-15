@@ -50,7 +50,7 @@ Enter.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet('https://pastebin.com/raw/bfFpEmcv'))()
 	else
 		local kickhanlder = game.Players.LocalPlayer
-		kickhanlder:Kick('Wrong key please join ')
+		kickhanlder:Kick('Wrong key please join https://discord.gg/82gvrCE5Ms')
 		warn('Imagine not looking up the right key L')
 	end
 end)
